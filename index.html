@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive landing page for Study MBBS Abroad with country listings, program details, and a lead generation form.">
+  <meta name="keywords" content="Study MBBS Abroad, MBBS, Medical Education, Abroad Studies">
+  <meta name="author" content="Your Name">
+  <title>Study MBBS Abroad</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .gradient-bg {
+      background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 115, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    }
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Hero Section -->
+  <div class="gradient-bg h-screen flex items-center justify-center text-center text-white fade-in">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Your MBBS Journey Starts Here</h1>
+      <p class="text-lg md:text-2xl mb-6">Explore top destinations for affordable and quality medical education abroad.</p>
+      <a href="#lead-form" class="bg-yellow-400 text-black px-8 py-3 rounded-full shadow-lg text-lg hover:bg-yellow-500 transition-all">
+        Apply Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Program Overview -->
+  <section class="py-16 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold text-gray-800">Why Study MBBS Abroad?</h2>
+    <p class="text-gray-600 text-lg mt-4">Embark on a transformative journey to become a globally recognized medical professional.</p>
+    <div class="mt-8 grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+        <h3 class="text-xl font-semibold">Affordable Tuition Fees</h3>
+        <p class="mt-2 text-gray-500">Achieve your dreams without financial stress. Many universities offer scholarships and flexible payment plans.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+        <h3 class="text-xl font-semibold">Global Recognition</h3>
+        <p class="mt-2 text-gray-500">Graduate from universities accredited by WHO, ECFMG, and other international medical bodies.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+        <h3 class="text-xl font-semibold">Cultural Diversity</h3>
+        <p class="mt-2 text-gray-500">Expand your horizons by studying in a multicultural and inclusive environment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Countries -->
+  <section class="py-16 text-center bg-white">
+    <h2 class="text-3xl font-bold text-gray-800">Top Countries for MBBS</h2>
+    <p class="text-gray-600 text-lg mt-4">Choose from a wide array of countries renowned for their medical education programs.</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-8">
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md w-52 hover:shadow-lg">
+        <img src="download1.png" alt="Russia" class="h-16 mx-auto">
+        <h3 class="text-lg font-semibold mt-4">Russia</h3>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md w-52 hover:shadow-lg">
+        <img src="download.jpeg" alt="Uzbekistan" class="h-16 mx-auto">
+        <h3 class="text-lg font-semibold mt-4">Uzbekistan</h3>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-md w-52 hover:shadow-lg">
+        <img src="download2.jpeg" alt="Kazakhstan" class="h-16 mx-auto">
+        <h3 class="text-lg font-semibold mt-4">Kazakhstan</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admission Process & Eligibility -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-800">Admission Process & Eligibility</h2>
+      <div class="mt-8">
+        <h3 class="text-xl font-semibold">Steps for Applying</h3>
+        <ol class="list-decimal ml-8 mt-4 text-gray-600 text-left">
+          <li>Choose your preferred country and university.</li>
+          <li>Submit required documents including transcripts and passport copies.</li>
+          <li>Receive your admission letter and pay the initial fees.</li>
+          <li>Apply for a student visa and prepare for your journey.</li>
+        </ol>
+        <h3 class="mt-8 text-xl font-semibold">Eligibility Criteria</h3>
+        <ul class="list-disc ml-8 mt-4 text-gray-600 text-left">
+          <li>Minimum 50% in 12th grade with Physics, Chemistry, and Biology.</li>
+          <li>NEET qualification mandatory for Indian students.</li>
+          <li>Must be 17 years or older by the time of admission.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Form -->
+  <section id="lead-form" class="py-16 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold">Start Your Application Now!</h2>
+      <p class="text-lg mt-4">Join thousands of students who have successfully started their MBBS journey abroad.</p>
+      <form class="mt-8 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg text-black" onsubmit="return validateForm(event)">
+        <div class="mb-4">
+          <label for="name" class="block text-lg font-semibold">Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" class="block w-full p-4 rounded border border-gray-300">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-lg font-semibold">Email</label>
+          <input type="email" id="email" placeholder="Enter your email address" class="block w-full p-4 rounded border border-gray-300">
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block text-lg font-semibold">Phone</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number" class="block w-full p-4 rounded border border-gray-300">
+        </div>
+        <div class="mb-4">
+          <label for="country" class="block text-lg font-semibold">Preferred Country</label>
+          <select id="country" class="block w-full p-4 rounded border border-gray-300">
+            <option value="">Select Country</option>
+            <option value="Russia">Russia</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Egypt">Egypt</option>
+          </select>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg text-lg hover:bg-blue-700">
+          Submit Application
+        </button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
+
