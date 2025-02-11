@@ -43,6 +43,8 @@ The JavaScript code is minimal, focusing on form validation to ensure that the u
 1. Clone the repository:
    ```bash
    git clone <https://github.com/Lavudya-Amusha/frontend.git>
+## Netlify deployed link
+   jocular-otter-ce688f.netlify.app
 
 
 
